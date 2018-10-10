@@ -7,7 +7,7 @@ import modelingModule from 'lib/features/modeling';
 import coreModule from 'lib/core';
 
 
-describe('features/modeling/behavior - remove boundary event after event based gateway', function() {
+describe('features/modeling/behavior - connect event based gateway to receive task with boundary', function() {
 
   var testModules = [ coreModule, modelingModule ];
 
@@ -17,9 +17,9 @@ describe('features/modeling/behavior - remove boundary event after event based g
 
 
   it('should remove the boundary event from the receive task after connecting the task with an event based gateway',
-    inject(function(modeling, elementRegistry, elementFactory) {
+    inject(function(modeling, elementRegistry) {
 
-    // given
+      // given
       var eventBasedGateway = elementRegistry.get('EventBasedGateway_1'),
           receiveTask = elementRegistry.get('ReceiveTask_1'),
           boundaryEvent = elementRegistry.get('BoundaryEvent_1');
