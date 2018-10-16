@@ -4,7 +4,7 @@
   "description": "A bpmn 2.0 toolkit and web modeler",
   "scripts": {
     "all": "run-s lint test distro test:distro",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "dev": "npm test -- --auto-watch --no-single-run",
     "test": "karma start test/config/karma.unit.js",
     "distro": "node tasks/build-distro.js",
